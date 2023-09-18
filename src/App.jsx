@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import useFetch from './hooks/useFetch'
 import FormUser from './components/FormUser'
-import UserCard from './components/userCard'
+import UserCard from './components/UserCard'
+
 
 
 function App() {
