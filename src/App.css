@@ -1,0 +1,15 @@
+
+.container_principal{
+    width: 100vw;
+    height: 100vh;
+}
+
+.container_varius{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+
