@@ -1,7 +1,6 @@
 
 .container_principal{
     width: 100vw;
-    height: 100vh;
 }
 
 .container_varius{
@@ -12,4 +11,10 @@
     margin-bottom: 50px;
 }
 
+.btn_create{
+    padding: 10px 20px;
+    background-color: #5f6deb;
+    color: white;
+    border: none;
+}
 

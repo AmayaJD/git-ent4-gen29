@@ -51,8 +51,9 @@
 }
 
 .btn_submit{
-    background-color: #555A88;
+    background-color: #5f6deb;
     padding: 4px;
     margin-top: 15px;
     color: white;
+    border: none;
 }

@@ -18,11 +18,11 @@ const UserCard = ({ user, deleteUser, setInfoUpdate, setActiveCreate }) => {
         <ul className='user__list'>
           <li className='user__item'>
             <span className='user__label'>EMAIL: </span>
-            <span className='user__value'>✉ {user.email}</span>
+            <span className='user__value'> <i class='bx bx-envelope'></i> {user.email}</span>
           </li>
           <li className='user__item'>
             <span className='user__label'>BIRTHDAY: </span>
-            <span className='user__value'>🎁 {user.birthday}</span>
+            <span className='user__value'><i class='bx bx-gift' ></i> {user.birthday}</span>
           </li>
           {/* <li className='user__item'>
             <span className='user__label'>PASSWORD: </span>
@@ -32,7 +32,7 @@ const UserCard = ({ user, deleteUser, setInfoUpdate, setActiveCreate }) => {
       </div>
       <hr />
       <div className='btn'>
-        <button onClick={handleDelete} className='btn__delete'><i class='bx bx-x'></i></button>
+        <button onClick={handleDelete} className='btn__delete'> <i class='bx bx-trash-alt' ></i> </button>
         {/* 🗑️ 🖊*/}
         <button onClick={handleEdit} className='btn__edit'><i class='bx bxs-edit' ></i></button>
       </div>

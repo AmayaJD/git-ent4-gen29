@@ -30,7 +30,7 @@ function App() {
 
       <div className='container_varius'>
         <h1 className='title'>Users</h1>
-        <button onClick={activeModal}>➕ Create user</button>
+        <button className='btn_create' onClick={activeModal}><i class='bx bx-plus'></i> Create user</button>
       </div>
       <div  className={`${activeCreate ? 'active_container__formUser' : 'container__formUser'}`}>
           <div className='container__create'>
