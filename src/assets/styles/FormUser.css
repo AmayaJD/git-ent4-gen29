@@ -29,6 +29,11 @@
     width: 35vw;
 }
 
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
 .form__close{
     display: flex;
     justify-content: space-between;
@@ -45,15 +50,23 @@
     padding: 17px 0px;
 }
 
-.form{
-    display: flex;
-    flex-direction: column;
-}
-
 .btn_submit{
     background-color: #5f6deb;
     padding: 4px;
     margin-top: 15px;
     color: white;
     border: none;
+}
+
+@media (max-width: 425px) {
+
+    .form__item{
+        padding: 5px 0px;
+        font-size: 13px;
+    }
+    .form__close {
+        font-size: 10px;
+        align-items: center;
+    }
+
 }

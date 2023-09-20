@@ -2,7 +2,7 @@ import '../assets/styles/FormUser.css';
 import { useEffect } from "react"
 import { useForm } from "react-hook-form"
 
-const FormUser = ({ createUsers, infoUpdate, updateUser, setInfoUpdate, setActiveCreate }) => {
+const FormUser = ({ createUsers, infoUpdate, updateUser, setInfoUpdate, setActiveCreate, setModalAlert, modalAlert }) => {
 
     const { handleSubmit, register, reset} = useForm()
 
@@ -13,10 +13,12 @@ const FormUser = ({ createUsers, infoUpdate, updateUser, setInfoUpdate, setActiv
         // Update
         updateUser('/users', infoUpdate.id, data)
         setInfoUpdate()
+        setModalAlert(true)
       } else {
         // Create
         createUsers('/users', data)
         // setInfoUpdate()
+        setModalAlert(true)
       }
       reset({
       // reset: para resetear los espacios del formulario.
@@ -34,13 +36,14 @@ const FormUser = ({ createUsers, infoUpdate, updateUser, setInfoUpdate, setActiv
 
     const handleClose = () => {
       setActiveCreate(false)
+      // setModalAlert(false)
     }
  
   return (
-  <>
-    <form onSubmit={handleSubmit(submit)} className="form">
+  
+  <form onSubmit={handleSubmit(submit)} className="form">
       <div className='form__close'>
-        <h2>New User</h2>
+        <h2> {infoUpdate ? 'Update' :'New User'}</h2>
         <button onClick={handleClose} className='btn_close'>✖</button>
       </div>
     <div className="form__item">
@@ -65,7 +68,7 @@ const FormUser = ({ createUsers, infoUpdate, updateUser, setInfoUpdate, setActiv
     </div>
     <button className="btn_submit">{ infoUpdate ? 'Update' : 'Create' }</button>
   </form>
-  </>
+  
     
 
   )

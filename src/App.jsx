@@ -3,6 +3,8 @@ import './App.css'
 import useFetch from './hooks/useFetch'
 import FormUser from './components/FormUser'
 import UserCard from './components/UserCard'
+import ModalCreateUpdate from './components/ModalCreateUpdate'
+import ModalDelete from './components/ModalDelete'
 
 
 
@@ -13,6 +15,8 @@ function App() {
 
   const [infoUpdate, setInfoUpdate] = useState()
   const [activeCreate, setActiveCreate] = useState(false)
+  const [modalAlert, setModalAlert] = useState(false)
+  const [deleteAlter, setDeleteAlter] = useState(false)
 
 
   useEffect(() => {
@@ -29,8 +33,8 @@ function App() {
     <div className='container_principal'>
 
       <div className='container_varius'>
-        <h1 className='title'>Users <i class='bx bxs-user-pin' ></i></h1>
-        <button className='btn_create' onClick={activeModal}><i class='bx bx-plus'></i> Create new user</button>
+        <h1 className='title'>Users <i className='bx bxs-user-pin' ></i></h1>
+        <button className='btn_create' onClick={activeModal}><i className='bx bx-plus'></i> Create new user</button>
       </div>
       <div  className={`${activeCreate ? 'active_container__formUser' : 'container__formUser'}`}>
           <div className='container__create'>
@@ -40,10 +44,23 @@ function App() {
             updateUser={updateUser}
             setInfoUpdate={setInfoUpdate}
             setActiveCreate={setActiveCreate}
+            setModalAlert={setModalAlert}
+            modalAlert={modalAlert}
           />
           </div>
       </div>
+
+      <ModalCreateUpdate 
+        modalAlert={modalAlert}
+        setModalAlert={setModalAlert}
+        setActiveCreate={setActiveCreate}
+        infoUpdate={infoUpdate}
+        />
       
+      <ModalDelete 
+        deleteAlter={deleteAlter}
+        setDeleteAlter={setDeleteAlter}
+        />
 
       <div className='container__card'>
         {
@@ -54,6 +71,7 @@ function App() {
               deleteUser={deleteUser}
               setInfoUpdate={setInfoUpdate}
               setActiveCreate={setActiveCreate}
+              setDeleteAlter={setDeleteAlter}
             />
           ))
         }
