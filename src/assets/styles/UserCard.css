@@ -59,6 +59,10 @@ span{
         width: 11em;
         padding: 13px;
     }
+
+    .user__value{
+        font-size: 12px;
+    }
     
     .btn__delete, .btn__edit{
        font-size: 15px;

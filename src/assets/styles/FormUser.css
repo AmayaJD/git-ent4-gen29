@@ -60,6 +60,9 @@
 
 @media (max-width: 425px) {
 
+    .container__create{
+        width: 50vw;
+    }
     .form__item{
         padding: 5px 0px;
         font-size: 13px;
@@ -67,6 +70,8 @@
     .form__close {
         font-size: 10px;
         align-items: center;
+        justify-content: space-around;
+        margin-bottom: 1em;
     }
 
 }
