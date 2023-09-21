@@ -2,7 +2,7 @@ import '../assets/styles/FormUser.css';
 import { useEffect } from "react"
 import { useForm } from "react-hook-form"
 
-const FormUser = ({ createUsers, infoUpdate, updateUser, setInfoUpdate, setActiveCreate, setModalAlert, modalAlert }) => {
+const FormUser = ({ createUsers, infoUpdate, updateUser, setInfoUpdate, setActiveCreate, setModalAlert, setUpdateCreate }) => {
 
     const { handleSubmit, register, reset} = useForm()
 
@@ -19,6 +19,7 @@ const FormUser = ({ createUsers, infoUpdate, updateUser, setInfoUpdate, setActiv
         createUsers('/users', data)
         // setInfoUpdate()
         setModalAlert(true)
+        setUpdateCreate(false)
       }
       reset({
       // reset: para resetear los espacios del formulario.
@@ -36,6 +37,7 @@ const FormUser = ({ createUsers, infoUpdate, updateUser, setInfoUpdate, setActiv
 
     const handleClose = () => {
       setActiveCreate(false)
+      setUpdateCreate(false)
       // setModalAlert(false)
     }
  
@@ -44,7 +46,7 @@ const FormUser = ({ createUsers, infoUpdate, updateUser, setInfoUpdate, setActiv
   <form onSubmit={handleSubmit(submit)} className="form">
       <div className='form__close'>
         <h2> {infoUpdate ? 'Update' :'New User'}</h2>
-        <button onClick={handleClose} className='btn_close'>✖</button>
+        <span onClick={handleClose} className='npm'>✖</span>
       </div>
     <div className="form__item">
       <label htmlFor="email" className="form__label">Email</label>

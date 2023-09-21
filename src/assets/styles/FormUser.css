@@ -42,6 +42,7 @@
 .btn_close{
     border: none;
     background-color: #E4E4E4;
+    cursor: pointer;
 }
 
 .form__item{
@@ -74,4 +75,19 @@
         margin-bottom: 1em;
     }
 
+}
+
+@media (max-height: 425px) {
+
+    .container__create {
+        width: 24vw;
+    }
+    .form__close {
+        /* display: flex;
+        justify-content: space-around; */
+        align-items: center;
+    }
+    .form__item{
+        padding: 2px 0px
+    }
 }

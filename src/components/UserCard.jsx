@@ -1,5 +1,5 @@
 import '../assets/styles/UserCard.css';
-const UserCard = ({ user, deleteUser, setInfoUpdate, setActiveCreate, setDeleteAlter }) => {
+const UserCard = ({ user, deleteUser, setInfoUpdate, setActiveCreate, setDeleteAlter, setUpdateCreate }) => {
 
     const handleDelete = () => {
         deleteUser('/users', user.id)
@@ -8,6 +8,7 @@ const UserCard = ({ user, deleteUser, setInfoUpdate, setActiveCreate, setDeleteA
     const handleEdit = () => {
         setInfoUpdate(user)
         setActiveCreate(true)
+        setUpdateCreate(true)
     }
   return (
     <article className='user'>

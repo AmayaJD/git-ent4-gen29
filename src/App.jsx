@@ -17,6 +17,7 @@ function App() {
   const [activeCreate, setActiveCreate] = useState(false)
   const [modalAlert, setModalAlert] = useState(false)
   const [deleteAlter, setDeleteAlter] = useState(false)
+  const [updateCreate, setUpdateCreate] = useState(false)
 
 
   useEffect(() => {
@@ -45,7 +46,7 @@ function App() {
             setInfoUpdate={setInfoUpdate}
             setActiveCreate={setActiveCreate}
             setModalAlert={setModalAlert}
-            modalAlert={modalAlert}
+            setUpdateCreate={setUpdateCreate}
           />
           </div>
       </div>
@@ -54,7 +55,7 @@ function App() {
         modalAlert={modalAlert}
         setModalAlert={setModalAlert}
         setActiveCreate={setActiveCreate}
-        infoUpdate={infoUpdate}
+        updateCreate={updateCreate}
         />
       
       <ModalDelete 
@@ -72,6 +73,7 @@ function App() {
               setInfoUpdate={setInfoUpdate}
               setActiveCreate={setActiveCreate}
               setDeleteAlter={setDeleteAlter}
+              setUpdateCreate={setUpdateCreate}
             />
           ))
         }

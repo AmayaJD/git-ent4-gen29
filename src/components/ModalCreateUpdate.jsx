@@ -1,15 +1,15 @@
 import '../assets/styles/Modal.css';
-const ModalCreateUpdate = ({ setModalAlert, modalAlert, setActiveCreate, infoUpdate}) => {
+const ModalCreateUpdate = ({ setModalAlert, modalAlert, setActiveCreate, updateCreate }) => {
 
   const handleOk = () => {
     setModalAlert(false)
     setActiveCreate(false)
   }
-  console.log(infoUpdate);
+  // console.log(setInfoUpdate);
   return (
     <div className={`${ modalAlert ? 'active__modal' : 'modal'}`}>
       <div className='mesage'> 
-        <h2> {infoUpdate ? 'Updated user' : 'Created user'}</h2>
+        <h2> {updateCreate ? 'Updated user' : 'Created user'}</h2>
         <button onClick={handleOk} className='btn_ok'>OK</button>
       </div>
     </div>
