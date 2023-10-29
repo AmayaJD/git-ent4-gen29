@@ -10,7 +10,8 @@ import ModalDelete from './components/ModalDelete'
 
 function App() {
 
-  const baseUrl = 'https://users-crud.academlo.tech'
+  const baseUrl = 'https://users-cruds-backend-dev-mzjj.3.us-1.fl0.io'
+  // const baseUrl = 'https://users-crud.academlo.tech'
   const [ users, getUsers, createUsers, deleteUser, updateUser  ] = useFetch(baseUrl)
 
   const [infoUpdate, setInfoUpdate] = useState()
